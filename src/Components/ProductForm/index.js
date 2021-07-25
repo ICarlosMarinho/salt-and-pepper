@@ -103,7 +103,7 @@ export default function ProductForm({ product, register, setModalVisible }) {
         type="number"
         min="0"
         max="1000"
-        step="0.1"
+        step="0.01"
         placeholder="Ex. 10.60"
         required
         value={price}

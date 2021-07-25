@@ -45,7 +45,7 @@ export default function ProductCard({ product }) {
         <strong>ID </strong>
         {product?.id}
       </i>
-      <Image src={product?.imgUrl} rel={`Foto do produto ${product?.name}`} />
+      <Image src={product?.imgUrl} alt={`Foto do produto ${product?.name}`} />
       <Title>{product?.name}</Title>
       <ExpiryDate expired={expired}>
         <strong>Data de validade </strong>
