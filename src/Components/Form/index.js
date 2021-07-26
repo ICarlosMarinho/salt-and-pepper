@@ -7,9 +7,6 @@ export default function Form({ children, backTo, ...rest }) {
     <StyledForm {...rest}>
       {children}
       <ButtonsSection>
-        <Button width="30%" type="submit">
-          Salvar
-        </Button>
         <Button
           linkButton={true}
           to={backTo}
@@ -18,6 +15,9 @@ export default function Form({ children, backTo, ...rest }) {
           alert="true"
         >
           Cancelar
+        </Button>
+        <Button width="30%" type="submit">
+          Salvar
         </Button>
       </ButtonsSection>
     </StyledForm>

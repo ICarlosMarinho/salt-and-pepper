@@ -5,7 +5,7 @@ import { deleteItem } from "../../Services/localStorageService";
 import AppContext from "../../Contexts/AppContext";
 import { useEffect, useState, useContext } from "react";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, setFilterText }) {
   const [expired, setExpired] = useState(false);
   const [deleteClicked, setDeleteClicked] = useState(false);
   const { setProducts, setProductToEdit } = useContext(AppContext);
@@ -30,6 +30,7 @@ export default function ProductCard({ product }) {
 
   function handleConfirmDelete() {
     setProducts(deleteItem("products", "id", product?.id));
+    setFilterText("");
   }
 
   function isExpired() {

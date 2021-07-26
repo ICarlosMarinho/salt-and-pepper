@@ -5,7 +5,7 @@ import { deleteItem } from "../../Services/localStorageService";
 import AppContext from "../../Contexts/AppContext";
 import { useState, useContext } from "react";
 
-export default function ProductCard({ client }) {
+export default function ClientCard({ client, setFilterText }) {
   const [deleteClicked, setDeleteClicked] = useState(false);
   const { setClients, setClientToEdit } = useContext(AppContext);
 
@@ -23,6 +23,7 @@ export default function ProductCard({ client }) {
 
   function handleConfirmDelete() {
     setClients(deleteItem("clients", "cpf", client?.cpf));
+    setFilterText("");
   }
 
   return (

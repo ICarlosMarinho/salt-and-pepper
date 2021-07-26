@@ -3,19 +3,29 @@ import ProductCard from "../ProductCard";
 import AppContext from "../../Contexts/AppContext";
 import { useContext } from "react";
 
-export default function ProductList() {
-  const { products } = useContext(AppContext);
+export default function ProductList({ setFilterText }) {
+  const { products, filter } = useContext(AppContext);
 
   return (
     <ListContainer
-      listLength={products.length}
+      listLength={filter.applied ? filter.list.length : products.length}
       emptyListMessage="Lista de produtos vazia!"
     >
-      {products.length
-        ? products.map((product) => (
-            <ProductCard key={product?.id} product={product} />
+      {filter.list.length
+        ? filter.list.map((product) => (
+            <ProductCard
+              key={product?.id}
+              product={product}
+              setFilterText={setFilterText}
+            />
           ))
-        : null}
+        : products.map((product) => (
+            <ProductCard
+              key={product?.id}
+              product={product}
+              setFilterText={setFilterText}
+            />
+          ))}
     </ListContainer>
   );
 }

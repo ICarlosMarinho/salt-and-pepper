@@ -8,6 +8,10 @@ import Footer from "./Components/Footer";
 
 function App() {
   const [products, setProducts] = useState(getList("products"));
+  const [filter, setFilter] = useState({
+    list: [],
+    applied: false,
+  });
   const [clients, setClients] = useState(getList("clients"));
   const [productToEdit, setProductToEdit] = useState({});
   const [clientToEdit, setClientToEdit] = useState({});
@@ -16,6 +20,8 @@ function App() {
     <AppContext.Provider
       value={{
         products,
+        filter,
+        setFilter,
         setProducts,
         productToEdit,
         setProductToEdit,

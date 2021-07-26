@@ -12,6 +12,12 @@ const NotFoundContainer = styled.div`
 const StyledImg = styled.img`
   width: 21%;
   height: auto;
+
+  @media (max-width: 500px) {
+    & {
+      width: 60%;
+    }
+  }
 `;
 
 export { NotFoundContainer, StyledImg };
