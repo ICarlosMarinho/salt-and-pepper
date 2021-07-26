@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import { getList } from "./Services/localStorageService";
 import AppContext from "./Contexts/AppContext";
 import { useState } from "react";
+import Footer from "./Components/Footer";
 
 function App() {
   const [products, setProducts] = useState(getList("products"));
@@ -27,6 +28,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Routes />
+      <Footer />
     </AppContext.Provider>
   );
 }

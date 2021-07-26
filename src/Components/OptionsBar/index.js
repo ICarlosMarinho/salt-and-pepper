@@ -1,14 +1,19 @@
-import { OptionsBarContainer } from "./style";
-import Button from "../Button";
-import Input from "../../Components/Input";
+import { OptionsBarContainer, ExtendedButton, InputContainer } from "./style";
+import Input from "../Input";
 
 export default function OptionsBar({ registerPath }) {
   return (
     <OptionsBarContainer>
-      <Button linkButton={true} to={registerPath} width="10%">
+      <ExtendedButton linkButton={true} to={registerPath} width="10%">
         Cadastrar
-      </Button>
-      <Input labelText="Filtrar" width="30%" height="30px" />
+      </ExtendedButton>
+      <InputContainer>
+        <Input
+          labelText="Filtrar"
+          height="30px"
+          placeholder="Insira o nome do item"
+        />
+      </InputContainer>
     </OptionsBarContainer>
   );
 }

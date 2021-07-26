@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     grid-template-areas: "header"
                          "view-container"
                          "footer";
-    grid-template-rows: 80px auto 80px;
+    grid-template-rows: 80px auto 30px;
     grid-template-columns: 100%;
     box-sizing: border-box;
     padding: 10px;

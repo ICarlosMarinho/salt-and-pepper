@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const StyledLink = styled(Link)`
-  width: ${(props) => props.width || "80px"};
+  width: ${(props) => props.width || "70px"};
   height: ${(props) => props.height || "40px"};
   color: #fff;
   background-color: ${(props) => (props.alert ? "#fc5858" : "#000")};
@@ -13,6 +13,9 @@ const StyledLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: fit-content;
+  box-sizing: border-box;
+  padding: 0 10px;
 
   &:hover {
     cursor: pointer;

@@ -22,7 +22,7 @@ export default function SuccessModal({ visible, setVisible, backTo }) {
             linkButton={true}
             to={backTo}
           >
-            Voltar para home
+            Ir para home
           </Button>
         </ButtonSection>
       </ModalContainer>
